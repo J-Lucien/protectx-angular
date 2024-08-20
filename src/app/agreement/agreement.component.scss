@@ -1,0 +1,108 @@
+
+@use '../../theme' as *;
+.image-vector{
+    .left{
+        position: absolute;
+        top: 748px;
+    }
+
+    .right{
+        position: absolute;
+        top: 104px;
+        right: 0;
+    }
+
+}
+
+main {
+
+    .agreement {
+        display: flex;
+        flex-direction: column;
+        width: 520px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 86px;
+
+        h1 {
+            font-size: 48px;
+            margin: 0;
+            padding: 0;
+            color: $text-color;
+        }
+
+        h1:first-of-type {
+            color: $primary-color;
+        }
+    }
+
+    .content {
+        width: 795px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        gap: 84px;
+        margin-bottom: 220px;
+
+        .card-wrapper {
+            .header {
+                width: max-content;
+                margin: 0 auto;
+                position: relative;
+                display: flex;
+
+                h2 {
+                    color: $text-color;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 24px;
+                    position: relative;
+                }
+
+                h2::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 3px;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: $primary-color;
+                }
+
+                .custom-line-left {
+                    width: 3px;
+                    top: 26px;
+                    left: -11px;
+                    height: 30px;
+                    background-color: $primary-color;
+                    transform: rotate(-45deg);
+                    position: absolute;
+                }
+
+                .custom-line-right{
+                    width: 3px;
+                    top: 26px;
+                    right: -11px;
+                    height: 30px;
+                    background-color: $primary-color;
+                    transform: rotate(45deg);
+                    position: absolute;
+                }
+            }
+
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                li{
+                    display: flex;
+                    align-items: start;
+                    gap: 27px;
+                    color: $second-text-color;
+                }
+            }
+        }
+    }
+}

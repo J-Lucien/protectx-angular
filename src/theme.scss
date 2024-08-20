@@ -1,0 +1,19 @@
+
+$background-color:#242424;
+$primary-color:#30C224;
+$text-color:#FFFFFF;
+$second-text-color:#91A18F;
+$primary-bg-color:#44BA31;
+$red-color: #D73434;
+$white-color-90: rgba(255, 255, 255, 0.9);
+$linear-gradient: linear-gradient(#83D61B, #44BE30);
+:export{
+    background-color: $background-color;
+    primary-color: $primary-color;
+    text-color: $text-color;
+    second-text-color: $second-text-color;
+    primary-bg-color: $primary-bg-color;
+    red-color:$red-color;
+    white-color-90: $white-color-90;
+    linear-gradient: $linear-gradient
+}

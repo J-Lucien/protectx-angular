@@ -1,0 +1,229 @@
+@use '../../theme' as *;
+
+main {
+
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .support {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 22px;
+
+        .support-wrapper {
+            display: flex;
+            gap: 26px;
+
+            img {
+                width: 62px;
+                height: 72px;
+            }
+
+            .support-content {
+                h3 {
+                    color: $text-color;
+                    margin: 0 0 4px 0;
+                    padding: 0;
+                }
+
+                p {
+                    color: $second-text-color;
+                }
+            }
+        }
+    }
+
+    .links {
+        ul {
+            display: flex;
+            margin: 0 0 35px 0;
+            padding: 0;
+            gap: 31px;
+            list-style: none;
+
+            li {
+                font-size: 20px;
+
+                a {
+                    color: $second-text-color;
+                    font-size: 20px;
+                    text-decoration: none;
+
+                    &.active {
+                        color: $primary-color;
+                    }
+
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .antiraid-wrapper {
+        max-width: 492px;
+        margin-bottom: 124px;
+        .antiraid-content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            fieldset {
+                display: flex;
+                justify-content: space-between;
+                border: none;
+                padding: 0;
+                margin: 0;
+                label:first-of-type {
+                    color: $second-text-color;
+                }
+
+
+
+                .switch {
+                    width: 53px;
+                    height: 24px;
+                    border: 2px solid $primary-color;
+                    border-left: none;
+                    border-right: none;
+                    display: flex;
+                    position: relative;
+
+                    .hidden-top{
+                        position: relative;
+
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 30px;
+                            height: 3px;
+                            background-color: $background-color;
+                            left: -38.5px;
+                            top: -3px;
+                        }
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 3px;
+                            background-color: $background-color;
+                            right: -41px;
+                            top: -3px;
+                        }
+                    }
+
+                    .hidden-bottom{
+                        position: relative;
+
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 3px;
+                            left: -28.5px;
+                            bottom: -2px;
+                            background-color: $background-color;
+                        }
+
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 3px;
+                            right: -41px;
+                            bottom: -2px;
+                            background-color: $background-color;
+                        }
+                    }
+
+                    .slider {
+
+                        position: absolute;
+                        cursor: pointer;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        transition: 0.4s;
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 11px;
+                            height: 11px;
+                            background-color: $primary-color;
+                            transform: translate(34px, 62%) rotate(45deg);
+                            transition: 0.4s;
+                        }
+                    }
+
+                    input {
+                        opacity: 0;
+                    }
+
+                    input:checked+.slider::after {
+                        background-color: $second-text-color;
+                        transform: translate(70%, 62%) rotate(45deg);
+                    }
+
+                    .ligne-top {
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 19px;
+                            height: 2px;
+                            left: -24px;
+                            top: 5px;
+                            background-color: $primary-color;
+                            transform: rotate(-45deg);
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 19px;
+                            height: 2px;
+                            right: -37px;
+                            top: 5px;
+                            background-color: $primary-color;
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                    .ligne-bottom {
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            width: 19px;
+                            height: 2px;
+                            left: -24px;
+                            bottom: 5px;
+                            background-color: $primary-color;
+                            transform: rotate(45deg);
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            width: 19px;
+                            height: 2px;
+                            right: -37px;
+                            bottom: 5px;
+                            background-color: $primary-color;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}

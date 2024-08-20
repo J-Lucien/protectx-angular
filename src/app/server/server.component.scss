@@ -1,0 +1,62 @@
+@use '../../theme' as *;
+
+
+.image{
+
+    .left-image{
+        position: absolute;
+        top: 46px;
+        left: -5px;
+    }
+    .right-image{
+        position: absolute;
+        right: 0;
+    }
+}
+
+main{
+    .select-servers{
+        display: flex;
+        margin: 0 auto;
+        margin-bottom: 362px;
+        max-width: 656.9px;
+        flex-direction: column;
+        align-content: center;
+        h1{
+            color: $text-color;
+            font-size: 48px;
+            text-align: center;
+            margin: 0;
+            margin-bottom: 98px;
+            span{
+                color: $primary-color;
+            }
+        }
+
+        .server-wrapper{
+            display: flex;
+            gap: 82px;
+            .server-card{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                img{
+                    margin-bottom: 17px;
+                    width: 129px;
+                }
+                h3{
+                    color: $text-color;
+                    font-weight: 600;
+                    font-size: 28px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    margin-bottom: 17px;
+                    text-align: center;
+                }
+                a{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../theme' as *;
+
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .support {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 22px;
+
+        .support-wrapper {
+            display: flex;
+            gap: 26px;
+
+            img {
+                width: 62px;
+                height: 72px;
+            }
+
+            .support-content {
+                h3 {
+                    color: $text-color;
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: 4px;
+                }
+
+                p {
+                    color: $second-text-color;
+                }
+            }
+        }
+    }
+
+
+}
