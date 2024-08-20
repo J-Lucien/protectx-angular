@@ -1,0 +1,138 @@
+@use '../../theme' as *;
+
+header {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin: 0 auto;
+        max-width: 1024px;
+        margin-top: 25px;
+        margin-bottom: 134px;
+
+        .settings {
+            .img-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 14px;
+
+                img {
+                    width: 29px;
+                    margin-bottom: 17px;
+                }
+
+                .up-arrow {
+                    width: 12px;
+
+                }
+            }
+
+        }
+
+    }
+
+    .my-servers {
+        position: relative;
+        display: inline-block;
+
+        .img-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 14px;
+
+            img {
+                width: 29px;
+                margin-bottom: 17px;
+
+            }
+
+            .up-arrow {
+                width: 12px;
+                transition: transform 0.3s ease;
+            }
+        }
+
+
+        ul {
+            border: 1px solid $primary-bg-color;
+            border-radius: 0.5rem;
+            padding: 11px;
+
+            li {
+                margin-bottom: 9px;
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+
+            li:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+
+        .dropdown {
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: $background-color;
+            min-width: max-content;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+        }
+
+        .img-wrapper:hover+.dropdown,
+        .dropdown:hover {
+            display: block;
+        }
+
+        .img-wrapper:hover .up-arrow,
+        .dropdown:hover~.img-wrapper .up-arrow {
+            transform: rotate(180deg);
+        }
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 24px;
+
+        li {
+            display: flex;
+            gap: 7px;
+
+            a {
+                color: $second-text-color;
+                text-decoration: none;
+
+                &:hover {
+                    color: $primary-bg-color;
+                }
+                &.active {
+                    background: linear-gradient(#C7D61B, #32BE1C);
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        
+
+        li img {
+            color: $second-text-color;
+        }
+    }
+}

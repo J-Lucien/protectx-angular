@@ -1,0 +1,73 @@
+@use '../../theme' as *;
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    .contact-wrapper{
+        .active {
+            background: linear-gradient(#C7D61B, #32BE1C);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        display: flex;
+        gap: 172px;
+        justify-content: space-between;
+        height: 146px;
+        // max-width: 1000px;
+        margin: 0 auto;
+        margin-bottom: 86px;
+        .card-contact{
+            h3, p{
+                color: $text-color;
+                a{
+                    color: $text-color;
+                    text-decoration: none;
+                    font-size: 16px;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+    
+            .website-log{
+                display: flex;
+                gap: 16px;
+                img{
+                    width: 55px;
+                    height: 64px;
+                }
+    
+                h3{
+                    span{
+                        color: $primary-bg-color;
+                        font-weight: bold;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .figma{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $second-text-color;
+        align-items: center;
+        p{
+            color: $second-text-color;
+            padding-left: 16px;
+        }
+    }
+
+    .copyright {
+        text-align: center;
+        margin-top: 48px;
+        margin-bottom: 32px;
+        color: $second-text-color;
+    }
+    
+}

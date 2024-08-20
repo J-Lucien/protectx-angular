@@ -1,0 +1,309 @@
+@use '../../theme' as *;
+
+main {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    .all-commands {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 76px;
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            color: $text-color;
+            font-size: 48px;
+            margin-bottom: 18px;
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        p {
+            color: $second-text-color;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 17px;
+        }
+
+
+    }
+
+    .search-container {
+        position: relative;
+        max-width: 360px;
+        margin-bottom: 33px;
+        margin-left: 18px;
+
+        // .search /* same as below */
+        input[type="search"] {
+            position: relative;
+            margin: 0;
+            width: 360px;
+            padding: 10px;
+            padding-right: 25px;
+            caret-color: $primary-color;
+            color: $text-color;
+            background-color: $background-color;
+            border: none;
+            border-top: 2px solid $primary-color;
+            border-bottom: 2px solid $primary-color;
+            outline: none;
+            box-sizing: border-box;
+        }
+
+        input[type="search"]::placeholder {
+            color: $second-text-color;
+        }
+
+        input[type="search"]:focus {
+            border-color: $primary-color;
+            border-left: none;
+        }
+
+        // draw the border of the input
+
+
+        .ligne-left::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 28px;
+            top: -4px;
+            left: -9px;
+            transform: rotate(45deg);
+            background-color: $primary-color;
+        }
+
+        .ligne-left-m-45::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 28px;
+            top: 15px;
+            left: -9px;
+            transform: rotate(-45deg);
+            background-color: $primary-color;
+        }
+
+        .ligne-left::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 28px;
+            top: -4px;
+            right: -9px;
+            transform: rotate(-45deg);
+            background-color: $primary-color;
+        }
+
+        .ligne-left-m-45::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 28px;
+            top: 15px;
+            right: -9px;
+            transform: rotate(45deg);
+            background-color: $primary-color;
+        }
+
+    }
+
+    .search-container::after {
+        content: url('../../assets/Search.png');
+        position: absolute;
+        pointer-events: none;
+        right: 0;
+        top: 20%;
+        // transform: translateY(-50%);
+    }
+
+
+    .links{
+        ul{
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 51px;
+
+            li{
+                color: $text-color;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600px;
+            }
+
+            .polygon{
+                position: relative;
+                width: 3rem;
+                height: 1.5rem;
+                background: linear-gradient(to right,#C7D61B,#32BE1C);
+                clip-path: polygon(0% 50%, 20% 0, 80% 0, 100% 50%, 80% 100%, 20% 100%);
+            }
+
+            
+        }
+    }
+
+    .info-wrapper{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 225px;
+        
+        .info-content{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            padding-left: 12px;
+            padding-right: 12px;
+            margin-bottom: 30px;
+            box-sizing: content-box;
+            flex-wrap: wrap;
+            position: relative;
+            p{
+                color: $second-text-color;
+                padding: 0;
+                margin: 0;
+                span{
+                    color: $text-color;
+                }
+            }
+
+            .last-info{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                .creator{
+                    display: flex;
+                    gap: 23px;
+                    align-items: center;
+                }
+            }
+
+            .last-info::before{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 20px;
+                left: -8px;
+                top: 11px;
+                background-color: $primary-bg-color;
+                transform: rotate(-45deg);
+            }
+
+            .last-info::after{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 20px;
+                right: -8px;
+                top: 11px;
+                background-color: $primary-bg-color;
+                transform: rotate(45deg);
+            }
+
+            .ligne{
+                position: absolute;
+                margin-right: 12px;
+                width: 100%;
+                height: 2px;
+                background-color: $primary-color;
+                bottom: -10px;
+                box-sizing: content-box;
+            }
+
+            .remove-queue{
+                position: absolute;
+                width: 30px;
+                height: 2px;
+                bottom: -10px;
+                right: -20px;
+                background-color: $background-color
+
+            }
+        }
+
+        .info-usage{
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            position: relative;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                h3{
+                    color: $primary-color;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                p{
+                    margin: 0;
+                    padding: 0;
+                    color: $second-text-color;
+                }
+            }
+
+            .last-ligne{
+                position: relative;
+            }
+
+            .last-ligne::before{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 20px;
+                left: -8px;
+                bottom: -26px;
+                background-color: $primary-bg-color;
+                transform: rotate(-45deg);
+            }
+
+            .last-ligne::after{
+                position: absolute;
+                content: '';
+                width: 2px;
+                height: 20px;
+                right: 4px;
+                bottom: -26px;
+                background-color: $primary-bg-color;
+                transform: rotate(45deg);
+            }
+
+            .ligne-2{
+                position: absolute;
+                margin-right: 12px;
+                width: 100%;
+                height: 2px;
+                background-color: $primary-color;
+                bottom: -25px;
+                box-sizing: content-box;
+            }
+
+            .remove-queue-2{
+                position: absolute;
+                width: 30px;
+                height: 2px;
+                bottom: -25px;
+                right: -20px;
+                background-color: $background-color
+
+            }
+        }
+    }
+
+}
